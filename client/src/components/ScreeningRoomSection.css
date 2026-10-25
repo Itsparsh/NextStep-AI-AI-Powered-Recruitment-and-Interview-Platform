@@ -1,0 +1,207 @@
+/* ============================================================
+   NextStep AI — Dedicated Screening Room Spotlight Section (SaaS Theme)
+   ============================================================ */
+
+.screening-spotlight-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.screening-spotlight-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.75rem;
+  padding: 3.5rem 3rem;
+  box-shadow: 
+    0 10px 25px -5px rgba(15, 23, 42, 0.06),
+    0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.screening-spotlight-info {
+  flex: 1.1;
+  text-align: left;
+}
+
+.screening-spotlight-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+}
+
+.screening-spotlight-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.screening-spotlight-desc {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 1.75rem;
+}
+
+.screening-feature-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.screening-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.screening-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+/* Screening Interactive Preview Shell */
+.screening-preview-shell {
+  flex: 1.2;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.25);
+  position: relative;
+}
+
+.screening-shell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+.screening-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.screening-video-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.screening-tile {
+  background: #1e293b;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.4rem;
+}
+
+.tile-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.tile-tag {
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+/* Controls inside Mock */
+.screening-mock-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .screening-spotlight-card {
+    flex-direction: column;
+    padding: 2.25rem 1.75rem;
+    gap: 2.5rem;
+  }
+  .screening-spotlight-info {
+    text-align: center;
+  }
+  .screening-spotlight-desc {
+    margin: 0 auto 1.75rem;
+  }
+  .screening-feature-pills {
+    justify-content: center;
+    text-align: left;
+  }
+  .screening-preview-shell {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .screening-spotlight-title {
+    font-size: 2.15rem;
+  }
+  .screening-video-duo {
+    grid-template-columns: 1fr;
+  }
+  .screening-feature-pills {
+    grid-template-columns: 1fr;
+  }
+}

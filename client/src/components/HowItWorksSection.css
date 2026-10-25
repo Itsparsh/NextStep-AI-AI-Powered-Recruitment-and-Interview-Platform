@@ -1,0 +1,169 @@
+/* ============================================================
+   NextStep AI — How It Works Section Styling (SaaS Theme)
+   ============================================================ */
+
+.workflow-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Timeline Track */
+.workflow-timeline-container {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+/* Horizontal connecting line */
+.workflow-progress-track {
+  position: absolute;
+  top: 30px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.workflow-progress-glow {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.4s ease;
+}
+
+/* 5 Steps Grid */
+.workflow-steps-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.workflow-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.workflow-step-card:hover {
+  transform: translateY(-3px);
+}
+
+.workflow-step-node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  position: relative;
+  color: #0f172a;
+}
+
+.workflow-step-card.active .workflow-step-node {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  transform: scale(1.08);
+}
+
+.workflow-step-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workflow-step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.workflow-step-card.active .workflow-step-title {
+  color: #2563eb;
+}
+
+.workflow-step-text {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* Detail Callout Box */
+.workflow-detail-box {
+  margin-top: 3.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.workflow-detail-content h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.workflow-detail-content p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .workflow-progress-track {
+    display: none;
+  }
+  .workflow-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    text-align: left;
+  }
+  .workflow-step-card {
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .workflow-step-node {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .workflow-detail-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+  }
+}

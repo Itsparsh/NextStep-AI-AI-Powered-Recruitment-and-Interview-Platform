@@ -1,0 +1,481 @@
+/* ============================================================
+   NextStep AI — Hero Section Styling (Clean SaaS Theme)
+   ============================================================ */
+
+.hero-section {
+  position: relative;
+  padding: 4.5rem 1.5rem 5.5rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  z-index: 2;
+}
+
+/* Left Hero Content */
+.hero-content {
+  flex: 1.1;
+  text-align: left;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.95rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1.75rem;
+}
+
+.hero-pill-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+  animation: pulse 1.8s infinite;
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 50%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: #475569;
+  max-width: 580px;
+  margin-bottom: 2.25rem;
+  font-weight: 400;
+}
+
+/* Hero CTA Row */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  padding: 0.95rem 1.85rem;
+  border-radius: 0.75rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  background: #2563eb;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -2px rgba(37, 99, 235, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.hero-btn-secondary {
+  padding: 0.95rem 1.75rem;
+  border-radius: 0.75rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.hero-btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Feature Highlights Bar */
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.hero-trust-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-trust-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-trust-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* ------------------------------------------------------------
+   Right Hero: Realistic 3D Perspective Product Preview
+   ------------------------------------------------------------ */
+.hero-preview-wrapper {
+  flex: 1.2;
+  position: relative;
+  perspective: 1200px;
+}
+
+.hero-preview-ambient-glow {
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(13, 148, 136, 0.08) 50%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-dashboard-frame {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 
+    0 20px 40px -10px rgba(15, 23, 42, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  transform: rotateY(-5deg) rotateX(3deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-dashboard-frame:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+  box-shadow: 
+    0 30px 60px -15px rgba(15, 23, 42, 0.14),
+    0 0 0 1px rgba(226, 232, 240, 0.8);
+}
+
+/* Mock Top Bar */
+.preview-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.35rem;
+}
+
+.preview-window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.preview-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.preview-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #15803d;
+  background: #f0fdf4;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid #bbf7d0;
+}
+
+/* Main Dashboard Card Contents */
+.preview-card-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+}
+
+.preview-candidate-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.candidate-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.candidate-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.candidate-meta h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.candidate-meta span {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.candidate-skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-chip {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  font-weight: 500;
+}
+
+.skill-chip.highlight {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+  font-weight: 600;
+}
+
+/* AI Match Gauge Card */
+.preview-gauge-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.gauge-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(#2563eb 0% 96%, #e2e8f0 96% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.gauge-inner {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+}
+
+.gauge-percent {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2563eb;
+  line-height: 1;
+}
+
+.gauge-label {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Screening Session Sub-panel */
+.preview-screening-subpanel {
+  margin-top: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.screening-info-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.screening-cam-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.screening-meta h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.screening-meta p {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Floating Badges anchored to preview frame */
+.floating-hero-pill {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.85rem;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #0f172a;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.floating-pill-left {
+  top: -20px;
+  left: -20px;
+  animation: floatCard1 7s ease-in-out infinite alternate;
+}
+
+.floating-pill-right {
+  bottom: -20px;
+  right: -20px;
+  animation: floatCard2 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatCard1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+@keyframes floatCard2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(8px); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 3.5rem 1.5rem 4rem;
+    gap: 3rem;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-description {
+    margin: 0 auto 2.25rem;
+  }
+  .hero-cta-group {
+    justify-content: center;
+  }
+  .hero-trust-bar {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 3.25rem;
+  }
+  .hero-preview-wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+  .hero-dashboard-frame {
+    transform: none !important;
+  }
+  .floating-pill-left, .floating-pill-right {
+    position: static;
+    margin: 0.5rem auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.35rem;
+  }
+  .preview-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

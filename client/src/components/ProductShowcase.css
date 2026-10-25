@@ -1,0 +1,572 @@
+/* ============================================================
+   NextStep AI — Interactive Product Showcase Styling (SaaS Theme)
+   ============================================================ */
+
+.showcase-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Showcase Segmented Tab Bar */
+.showcase-tabs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  padding: 0.45rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  max-width: 980px;
+  margin: 0 auto 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.showcase-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+  position: relative;
+}
+
+.showcase-tab-btn:hover {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.showcase-tab-btn.active {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  font-weight: 700;
+}
+
+/* Auto-Slide Status & Progress Bar Strip */
+.showcase-progress-strip {
+  max-width: 980px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.showcase-autoplay-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.showcase-autoplay-badge:hover {
+  background: #dbeafe;
+}
+
+.showcase-timer-bar-track {
+  flex: 1;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.showcase-timer-bar-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 9999px;
+  animation: timerProgress 4.5s linear infinite;
+  transform-origin: left;
+}
+
+.showcase-timer-bar-fill.paused {
+  animation-play-state: paused;
+}
+
+@keyframes timerProgress {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* Master Showcase Frame with Navigation Arrows */
+.showcase-canvas-outer {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.showcase-canvas-frame {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 10px 25px -5px rgba(15, 23, 42, 0.06),
+    0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  padding: 2.25rem;
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+/* Slide Transition Animations */
+.showcase-slide-wrapper {
+  animation: slideFadeInNext 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.showcase-slide-wrapper.slide-prev {
+  animation: slideFadeInPrev 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideFadeInNext {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFadeInPrev {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Side Navigation Arrows */
+.showcase-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.showcase-arrow-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #2563eb;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrow-left {
+  left: -22px;
+}
+
+.arrow-right {
+  right: -22px;
+}
+
+/* Tab Header Strip inside Frame */
+.showcase-frame-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.75rem;
+}
+
+.showcase-frame-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.showcase-illustrative-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+}
+
+/* Bottom Pagination Dots */
+.showcase-dots-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+
+.showcase-dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.showcase-dot-btn:hover {
+  background: #94a3b8;
+}
+
+.showcase-dot-btn.active {
+  width: 26px;
+  background: #2563eb;
+}
+
+/* 1. Candidate Dashboard View */
+.view-candidate-dash {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.candidate-dash-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.c-metric-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.c-metric-num {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.c-metric-title {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* 2. Recruiter Dashboard View */
+.recruiter-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.pipeline-col {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  padding: 1rem;
+}
+
+.pipeline-col-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.85rem;
+}
+
+.pipeline-col-count {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.pipeline-card-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.65rem;
+  padding: 0.85rem;
+  margin-bottom: 0.65rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.pipeline-item-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.pipeline-item-role {
+  font-size: 0.74rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-item-score {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  display: inline-block;
+}
+
+/* 3. Screening Room View Preview */
+.screening-preview-stage {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+  background: #0f172a;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #334155;
+}
+
+.video-grid-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  min-height: 260px;
+}
+
+.video-feed-box {
+  background: #1e293b;
+  border-radius: 0.85rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.video-avatar-pulse {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.video-feed-name-tag {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 0.65rem;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Screening Controls Bar */
+.screening-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.screening-btn-ctrl {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+}
+
+.screening-btn-ctrl:hover {
+  background: rgba(37, 99, 235, 0.4);
+  border-color: #60a5fa;
+}
+
+.screening-btn-leave {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Screening Sidebar Editor */
+.screening-side-editor {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.85rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-snippet-box {
+  background: #090d16;
+  padding: 0.85rem;
+  border-radius: 0.65rem;
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: #38bdf8;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  flex: 1;
+}
+
+/* Demo Notice Bar inside Slide */
+.showcase-demo-notice-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.showcase-demo-notice-text {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: #1e40af;
+}
+
+.showcase-demo-badge {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  color: #1d4ed8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.showcase-demo-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.showcase-demo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.showcase-demo-btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.showcase-demo-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.showcase-demo-btn-secondary:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .candidate-dash-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recruiter-pipeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .screening-preview-stage {
+    grid-template-columns: 1fr;
+  }
+  .showcase-arrow-btn {
+    display: none;
+  }
+}
